@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './App.module.css';
 import poweredImage from './assets/powered.png';
 import { levels, calculateImc } from './helpers/imc';
-
+import { GridItem } from './components/GridItem/GridItem'
 
 const App = () => {
 
@@ -50,7 +50,11 @@ const App = () => {
                     <button onClick={handleCalculateButton}>Calcular</button>
                 </div>
                 <div className={styles.rightSide}>
-                    ...
+                    <div className={styles.grid}>
+                        {levels.map((item, key) => (
+                            <GridItem key={key} item={item}/>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
