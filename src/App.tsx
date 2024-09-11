@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './App.module.css';
-import poweredImage from './assets/powered.png'
+import poweredImage from './assets/powered.png';
+import { levels, calculateImc } from './helpers/imc';
 
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
     const [weightField, setWeightField] = useState<number>(0);
 
     const handleCalculateButton = () => {
-        if(heightField && weightField) {
+        if (heightField && weightField) {
 
         } else {
             alert("Digite todos os campos...");
